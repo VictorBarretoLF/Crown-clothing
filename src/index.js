@@ -7,6 +7,7 @@ import Home from "./routes/home/home.component";
 import Navigation from "./routes/navigation/navigation.component";
 import Authentication from "./routes/authentication/authentication.component";
 import { UserProvider } from "./contexts/user.context";
+import Shop from "./routes/shop/shop.component";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "shop",
-        element: <h1>I am the shop</h1>,
+        element: <Shop />,
       },
       {
         path: "auth",
