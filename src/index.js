@@ -2,36 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./routes/home/home.component";
-import Navigation from "./routes/navigation/navigation.component";
-import Authentication from "./routes/authentication/authentication.component";
-import Shop from "./routes/shop/shop.component";
-
+import { RouterProvider } from "react-router-dom";
 import { UserProvider } from "./contexts/user.context";
 import { ProductsProvider } from "./contexts/products.context";
 import { CartProvider } from "./contexts/cart.context";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navigation />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: "shop",
-        element: <Shop />,
-      },
-      {
-        path: "auth",
-        element: <Authentication />,
-      },
-    ],
-  },
-]);
+import { router } from "./router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
